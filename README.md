@@ -11,4 +11,8 @@ I'm looking to improve my general coding skills, as well as building more famili
 4. Read the CSV
 
 
+### Context
 
+In order for Javascript to actually be executed, it is usually run by your browser. By simply taking the HTML or JS, you are likely to get the unmodified data, which may not be what you want. Some libraries allow you to run the Javascript without a browser (abstraction is your friend...). 
+
+The libraries used are sys, pandas, and requestsHTML
