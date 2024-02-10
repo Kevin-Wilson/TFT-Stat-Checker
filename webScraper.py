@@ -1,7 +1,4 @@
 import requests
-import sys
-from bs4 import BeautifulSoup
-from selenium import webdriver
 from requests_html import HTMLSession
 
 # Get the raw HTML with requests lib
