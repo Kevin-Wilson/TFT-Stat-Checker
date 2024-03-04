@@ -6,11 +6,11 @@ from requests_html import HTMLSession
 
 #Get data
 session = HTMLSession()
-print("Accessing https://www.metatft.com/comps...")
-r = session.get('https://www.metatft.com/comps')
+print("Accessing https://mobalytics.gg/tft/tier-list/team-comps...")
+r = session.get('https://mobalytics.gg/tft/tier-list/team-comps')
 r.html.render()
-compText = r.html.find('.Comp_Title', first = False)
-statText = r.html.find('.Stat_Number', first = False)
+compText = r.html.find('.m-1bpc5zi', first = False)
+statText = r.html.find('.m-1rhbarm', first = False)
 
 #Write to file
 file = open("compdata.csv", "w")
@@ -19,6 +19,7 @@ file.writelines("comp,avg. place\n")
 for i in range(0,5):
 
     file.writelines(compText[i].text + "," + statText[i*4].text + "\n")
+    
 
 file.close()
 
